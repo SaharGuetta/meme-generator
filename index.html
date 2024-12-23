@@ -1,25 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Generator</title>
+    <title>Sahar's Meme Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body onload="onInit()" class="grid-container">
-    <!-- <nav class="nav-bar">Meme Generator</nav> -->
-    <div class="editor-container">
-        <button class="close-btn" onclick="closeModal()">x</button>
-        <canvas></canvas>
-    </div>
-    <div class="image-container">
-    </div>
-    <div onclick="closeModal()" class="black-screen"></div>
-
-    <script src="script.js"></script>
+<body onload="onInit()">
+    <section class="top-nav">
+        <nav>
+            <h2>Meme Generator</h2>
+            <ul class="nav-buttons">
+                <button onclick="showGallery()">Gallery</button>
+                <button>Upload</button>
+            </ul>
+        </nav>
+    </section>
+    <section class="meme-container">
+        <div class="image-container">
+            <label class="upload-label">Upload</label>
+            <img onclick="onImageClick()" >
+        </div>
+    </section>
+    <section class="editor-screen">
+        <canvas width="500" height="500"></canvas>
+        <br>
+        <input class="text-input" type="text" placeholder="Enter text here">
+        <br>
+        
+        <button onclick="addText()">Add Text</button>
+    </section>
+    <script src="memesjs.js"></script>
 </body>
-
 </html>
